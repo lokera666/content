@@ -2,19 +2,13 @@
 title: AudioWorkletNode
 slug: Web/API/AudioWorkletNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioWorkletNode
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SecureContext_Header}}
 
-> **Note:** Although the interface is available outside [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), the {{domxref("BaseAudioContext.audioWorklet")}} property is not, thus custom {{domxref("AudioWorkletProcessor")}}s cannot be defined outside them.
+> [!NOTE]
+> Although the interface is available outside [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), the {{domxref("BaseAudioContext.audioWorklet")}} property is not, thus custom {{domxref("AudioWorkletProcessor")}}s cannot be defined outside them.
 
 The **`AudioWorkletNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) represents a base class for a user-defined {{domxref("AudioNode")}}, which can be connected to an audio routing graph along with other nodes. It has an associated {{domxref("AudioWorkletProcessor")}}, which does the actual audio processing in a Web Audio rendering thread.
 
@@ -25,7 +19,7 @@ The **`AudioWorkletNode`** interface of the [Web Audio API](/en-US/docs/Web/API/
 - {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}}
   - : Creates a new instance of an `AudioWorkletNode` object.
 
-## Properties
+## Instance properties
 
 _Also Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
@@ -39,7 +33,7 @@ _Also Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("AudioWorkletNode.processorerror_event", "processorerror")}}
   - : Fired when an error is thrown in associated {{domxref("AudioWorkletProcessor")}}. Once fired, the processor and consequently the node will output silence throughout its lifetime.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from its parent, {{domxref("AudioNode")}}_.
 
@@ -75,7 +69,7 @@ const audioContext = new AudioContext();
 await audioContext.audioWorklet.addModule("random-noise-processor.js");
 const randomNoiseNode = new AudioWorkletNode(
   audioContext,
-  "random-noise-processor"
+  "random-noise-processor",
 );
 randomNoiseNode.connect(audioContext.destination);
 ```

@@ -2,14 +2,6 @@
 title: FileSystemFileEntry
 slug: Web/API/FileSystemFileEntry
 page-type: web-api-interface
-tags:
-  - API
-  - File and Directory Entries API
-  - FileEntry
-  - Files
-  - Interface
-  - Offline
-  - Reference
 browser-compat: api.FileSystemFileEntry
 ---
 
@@ -19,12 +11,14 @@ The **`FileSystemFileEntry`** interface of the [File and Directory Entries API](
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits the properties of its parent interface, {{domxref("FileSystemEntry")}}, but has no properties unique to this interface._
 
-## Methods
+## Instance methods
 
+- {{domxref("FileSystemFileEntry.createWriter", "createWriter()")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Returns a {{domxref("FileWriter")}} object which can be used to write data into the file represented by the directory entry.
 - {{domxref("FileSystemFileEntry.file", "file()")}}
   - : Creates a new {{domxref("File")}} object which can be used to read the file.
 

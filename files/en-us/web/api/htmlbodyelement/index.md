@@ -2,12 +2,6 @@
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLBodyElement
 ---
 
@@ -17,7 +11,7 @@ The **`HTMLBodyElement`** interface provides special properties (beyond those in
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -34,7 +28,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLBodyElement.vLink")}} {{deprecated_inline}}
   - : A string that represents the color of visited links.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
@@ -44,7 +38,8 @@ The {{domxref("HTMLElement")}} events are inherited.
 
 The following {{domxref("Window")}} `onXYZ` event handler properties are also available as aliases targeting the `window` object. However, it is advised to listen to them on the `window` object directly rather than on `HTMLBodyElement`.
 
-> **Note:** Using `addEventListener()` on `HTMLBodyElement` will not work for the `onXYZ` event handlers listed below. Listen to the events on the {{domxref("window")}} object instead.
+> [!NOTE]
+> Using `addEventListener()` on `HTMLBodyElement` will not work for the `onXYZ` event handlers listed below. Listen to the events on the {{domxref("window")}} object instead.
 
 - {{domxref("window.afterprint_event", "HTMLBodyElement.onafterprint")}}
   - : Fired after the associated document has started printing or the print preview has been closed.

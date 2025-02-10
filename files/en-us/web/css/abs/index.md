@@ -2,19 +2,10 @@
 title: abs()
 slug: Web/CSS/abs
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - abs
-  - Experimental
 browser-compat: css.types.abs
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns the absolute value of the argument, as the same type as the input.
 
@@ -39,7 +30,7 @@ The absolute value of `x`.
 - if `x`'s numeric value is positive or `0⁺`, return `x`.
 - Otherwise, returns `-1 * x`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
@@ -65,6 +56,18 @@ div {
   background-image: linear-gradient(abs(var(--deg)), blue, red);
 }
 ```
+
+### Backwards compatible fallback
+
+In older browsers that lack the support for CSS `abs()` function, you can use the CSS {{CSSxRef("max")}} function to achieve the same result, as shown below:
+
+```css
+p {
+  line-height: max(var(--lh), -1 * var(--lh));
+}
+```
+
+We use the {{CSSxRef("max")}} function to return the largest (most positive) value from a list of two values: `var(--lh)` or `-1 * var(--lh)`. Irrespective of whether `--lh` is positive or negative, the calculated return value will always be positive, that is, an absolute number.
 
 ## Specifications
 

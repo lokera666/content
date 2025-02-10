@@ -1,22 +1,18 @@
 ---
 title: Firefox tracking protection
 slug: Web/Privacy/Firefox_tracking_protection
-tags:
-  - Privacy
-  - Private browsing
-  - blocking
-  - tracking
+page-type: guide
 ---
 
 ## What is tracking protection?
 
-Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs, in Firefox for Android), Firefox will block content loaded from domains that track users across sites.
+Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs, in Firefox for Android), Firefox will block content loaded from domains that track users across sites (i.e. via [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies)).
 
 If blocked content is part of the page layout, users may notice layout issues where Firefox blocked these loads. Sometimes users won't notice at all, if the page grid works such that other page elements slide in to fill holes left by blocked elements.
 
 When Firefox blocks content, it logs a message to the Web Console like this:
 
-```
+```plain
 The resource at "http://some/url" was blocked because tracking protection is enabled.
 ```
 
@@ -28,11 +24,11 @@ Click the ⓘ symbol in the address bar to view information about the currently 
 
 If tracking cookies were present, you would be able to view the list by clicking on "Blocking Tracking Cookies" in the above image to view the following popup:
 
-![](tracking_cookies.png)
+![Page information showing cookies and site data.](tracking_cookies.png)
 
 You can click "Manage Content Blocking" to change the blocking settings:
 
-![](content_blocking.png)
+![There are 3 levels of content blocking, standard, strict, or custom, which can be set to always on or only on when firefox is set to block known trackers.](content_blocking.png)
 
 ## How does Firefox choose what to block?
 
@@ -44,10 +40,10 @@ Sites that track users are most commonly third-party advertising and analytics s
 
 ## What does this mean for your website?
 
-Most obviously, it means that when tracking protection is enabled:
+Primarily, it means that when tracking protection is enabled:
 
-- content served from third-party trackers will not be visible to users
-- your site won't be able to use third-party advertising or analytics services that engage in tracking
+- Content served from third-party trackers will not be visible to users.
+- Your site won't be able to use third-party advertising or analytics services that engage in tracking.
 
 More subtly, if other parts of your site depend on trackers being loaded, then these parts will also be broken when tracking protection is enabled. For example, if your site includes a callback that runs when content from a tracking site is loaded, then the callback will not execute.
 
@@ -101,4 +97,9 @@ Instead, you should account for the case when Google Analytics is missing by che
 
 More information about this technique is available at [Google Analytics, Privacy, and Event Tracking](https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/).
 
-> **Note:** Depending on a third party in this way is not a good practice anyway, because then your site can be broken if the third party is slow or unavailable, or if the tracker has been blocked by an add-on.
+> [!NOTE]
+> Depending on a third party in this way is not a good practice anyway, because then your site can be broken if the third party is slow or unavailable, or if the tracker has been blocked by an add-on.
+
+<section id="Quick_links">
+{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
+</section>
