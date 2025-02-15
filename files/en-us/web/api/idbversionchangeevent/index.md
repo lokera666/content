@@ -2,24 +2,12 @@
 title: IDBVersionChangeEvent
 slug: Web/API/IDBVersionChangeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Database
-  - IDBVersionChangeEvent
-  - IndexedDB
-  - Interface
-  - JavaScript
-  - Reference
-  - Storage
 browser-compat: api.IDBVersionChangeEvent
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`IDBVersionChangeEvent`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) indicates that the version of the database has changed, as the result of an {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} event handler function.
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 
@@ -28,7 +16,7 @@ The **`IDBVersionChangeEvent`** interface of the [IndexedDB API](/en-US/docs/Web
 - {{domxref("IDBVersionChangeEvent.IDBVersionChangeEvent", "IDBVersionChangeEvent()")}}
   - : Creates and returns a new `IDBVersionChangeEvent` object which is used to represent when a version of the database has changed.
 
-## Properties
+## Instance properties
 
 _Also inherits properties from its parent, {{domxref("Event")}} interface._
 
@@ -37,7 +25,7 @@ _Also inherits properties from its parent, {{domxref("Event")}} interface._
 - {{ domxref("IDBVersionChangeEvent.newVersion") }} {{ReadOnlyInline}}
   - : Returns the new version of the database.
 
-### Methods
+## Instance methods
 
 _No specific method, but inherits methods from its parent, {{domxref("Event")}} interface._
 
@@ -53,11 +41,13 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable. This is used a lot later on, for opening transactions and suchlike.
   const db = DBOpenRequest.result;

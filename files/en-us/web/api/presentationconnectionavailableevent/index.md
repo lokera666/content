@@ -2,14 +2,8 @@
 title: PresentationConnectionAvailableEvent
 slug: Web/API/PresentationConnectionAvailableEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Presentation API
-  - PresentationConnectionAvailableEvent
-  - PresentationRequest
-  - Reference
-  - events
+status:
+  - experimental
 browser-compat: api.PresentationConnectionAvailableEvent
 ---
 
@@ -26,7 +20,7 @@ A [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlli
 - {{domxref("PresentationConnectionAvailableEvent.PresentationConnectionAvailableEvent", "PresentationConnectionAvailableEvent()")}} {{Experimental_Inline}}
   - : Creates a new PresentationConnectionAvailableEvent.
 
-## Properties
+## Instance properties
 
 - {{domxref("PresentationConnectionAvailableEvent.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a references to the {{domxref("PresentationConnection")}} object that fired the event.

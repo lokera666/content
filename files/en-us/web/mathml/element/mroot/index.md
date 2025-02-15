@@ -1,30 +1,19 @@
 ---
 title: <mroot>
 slug: Web/MathML/Element/mroot
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.mroot
 ---
 
 {{MathMLRef}}
 
-The MathML `<mroot>` element is used to display roots with an explicit index. Two arguments are accepted, which leads to the syntax: `<mroot> base index </mroot>`.
+The **`<mroot>`** [MathML](/en-US/docs/Web/MathML) element is used to display roots with an explicit index. Two arguments are accepted, which leads to the syntax: `<mroot> base index </mroot>`.
 
 ## Attributes
 
 This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
 ## Examples
-
-```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
-```
 
 ```html
 <math display="block">
@@ -35,7 +24,20 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 </math>
 ```
 
-{{ EmbedLiveSample('mroot_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Examples')}}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 
